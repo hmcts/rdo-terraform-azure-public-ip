@@ -3,6 +3,15 @@ variable "rg_location" {
   default     = "UK South"
 }
 
+variable "rg_location_shortname" {
+  description = "Location map for the rg name"
+  type        = "map"
+  default     = {
+                  "UK South" = "uks"
+                  "UK West"  = "ukw"
+                }
+}
+
 variable "pip_allocation_method" {
   description = "Static or Dynamic IP"
   default     = "Static"
